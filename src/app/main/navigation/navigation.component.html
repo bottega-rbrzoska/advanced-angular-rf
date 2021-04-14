@@ -5,8 +5,8 @@
       <a mat-button routerLink="/contact">Contact</a>
     </div>
     <div>
-      <button mat-flat-button (click)="login()">Login</button>
-      <button mat-flat-button color="accent" (click)="logout()">Logout</button>
+      <button mat-flat-button *ngIf="!(isLoggedIn$ | async)" (click)="login()">Login</button>
+      <button mat-flat-button color="accent" *ngIf="(isLoggedIn$ | async)"  (click)="logout()">Logout</button>
     </div>
   </mat-toolbar>
 </nav>
