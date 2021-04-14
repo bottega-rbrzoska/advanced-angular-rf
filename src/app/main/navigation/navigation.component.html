@@ -1,0 +1,12 @@
+<nav>
+  <mat-toolbar color="primary" class="flex justify-between">
+    <div>
+      <a mat-button routerLink="/">Home</a>
+      <a mat-button routerLink="/contact">Contact</a>
+    </div>
+    <div>
+      <button mat-flat-button (click)="login()">Login</button>
+      <button mat-flat-button color="accent" (click)="logout()">Logout</button>
+    </div>
+  </mat-toolbar>
+</nav>
