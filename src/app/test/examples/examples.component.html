@@ -1,0 +1,14 @@
+<p>examples works!</p>
+<div>
+  <div>
+    <div class="test" rfTestAttr="red" *rfTestStr="let index">Element1 ({{index}})</div>
+  </div>
+  <div>
+    <div class="test" rfTestAttr="blue" #myBlock="attrDir">Element2</div>
+  </div>
+</div>
+
+<button mat-button color="primary" (click)="myBlock.changeColorOnMouseOver()">Click</button>
+
+
+<!--<form #mySuperForm="ngForm" (ngSubmit)="submit(mySuperForm.value)">...-->s

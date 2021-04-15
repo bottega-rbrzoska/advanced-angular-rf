@@ -7,6 +7,7 @@ import { CustomPreloadService } from './core/custom-preload.service';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'test', loadChildren: () => import('./test/test.module').then(m => m.TestModule), data: { preload: true}},
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule), data: { preload: true}},
   { path: 'twitter', loadChildren: () => import('./twitter/twitter.module').then(m => m.TwitterModule), data: { preload: false}}
 ];
