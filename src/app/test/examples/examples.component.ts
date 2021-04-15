@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { TestAttrDirective } from 'src/app/shared/directives/test-attr.directive';
+import { ExampleService } from '../example.service';
 
 @Component({
   selector: 'rf-examples',
@@ -9,7 +10,9 @@ import { TestAttrDirective } from 'src/app/shared/directives/test-attr.directive
 export class ExamplesComponent implements OnInit, AfterViewInit {
 
   @ViewChildren(TestAttrDirective) directives: QueryList<TestAttrDirective>
-  constructor() { }
+  constructor(private exampleService: ExampleService) {
+    console.log(exampleService)
+  }
 
   ngOnInit(): void {
   }

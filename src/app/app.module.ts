@@ -10,6 +10,7 @@ import { NavigationComponent } from './main/navigation/navigation.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { HomeComponent } from './main/home/home.component';
 import { CoreModule } from './core/core.module';
+import { NotificationsModule } from './shared/notifications/notifications.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NotificationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
