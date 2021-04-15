@@ -4,7 +4,7 @@ import { createComponentFactory, Spectator } from '@ngneat/spectator';
 import { NotificationsService } from 'dist/rf-lib';
 import { MatButtonModule } from '@angular/material/button';
 
-fdescribe('HomeComponent', () => {
+describe('HomeComponent', () => {
   const __MOCKS__ = {
     notificationService: notificationsMockFactory()
   };
