@@ -6,7 +6,6 @@ import { TestAttrDirective } from './directives/test-attr.directive';
 import { TestStrDirective } from './directives/test-str.directive';
 import { SelectableDirective } from './directives/selectable.directive';
 import { MatCardModule } from '@angular/material/card';
-import { NotificationsService } from './notifications/notifications.service';
 
 
 @NgModule({

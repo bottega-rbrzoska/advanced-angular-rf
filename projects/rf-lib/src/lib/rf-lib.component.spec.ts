@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TweetImgComponent } from './tweet-img.component';
+import { RfLibComponent } from './rf-lib.component';
 
-describe('TweetImgComponent', () => {
-  let component: TweetImgComponent;
-  let fixture: ComponentFixture<TweetImgComponent>;
+describe('RfLibComponent', () => {
+  let component: RfLibComponent;
+  let fixture: ComponentFixture<RfLibComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TweetImgComponent ]
+      declarations: [ RfLibComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TweetImgComponent);
+    fixture = TestBed.createComponent(RfLibComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

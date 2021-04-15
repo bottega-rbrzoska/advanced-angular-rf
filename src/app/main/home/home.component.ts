@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationsService } from 'src/app/shared/notifications/notifications.service';
+import { NotificationsService } from 'projects/rf-lib/src/public-api';
 
 @Component({
   selector: 'rf-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pushNotification() {
+  notify() {
     this.notificationService.pushNotification('hello from home!')
   }
 

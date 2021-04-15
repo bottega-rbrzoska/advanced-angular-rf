@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { CustomPreloadService } from './custom-preload.service';
+// import { CustomPreloadService } from './custom-preload.service';
 
-describe('CustomPreloadService', () => {
-  let service: CustomPreloadService;
+// describe('CustomPreloadService', () => {
+//   let service: CustomPreloadService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(CustomPreloadService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(CustomPreloadService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });

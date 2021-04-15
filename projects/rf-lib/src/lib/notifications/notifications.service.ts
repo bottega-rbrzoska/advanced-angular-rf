@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { ApplicationRef, ComponentFactory, ComponentFactoryResolver, EmbeddedViewRef, Inject, Injectable, Injector, Renderer2 } from '@angular/core';
+import { ApplicationRef, ComponentFactory, ComponentFactoryResolver, EmbeddedViewRef, Inject, Injectable, Injector } from '@angular/core';
 import { Subject } from 'rxjs';
 import { NotificationComponent } from './notification/notification.component';
 
@@ -10,7 +10,7 @@ export class NotificationsService {
   private notificationsSubj = new Subject<string>();
   componentFactory: ComponentFactory<NotificationComponent>;
   notifications$ = this.notificationsSubj.asObservable();
-  constructor(private injector: Injector, @Inject(DOCUMENT) private document: Document, private appRef: ApplicationRef, cfr: ComponentFactoryResolver) {
+  constructor(private injector: Injector, @Inject(DOCUMENT) private document: any, private appRef: ApplicationRef, cfr: ComponentFactoryResolver) {
 
     this.componentFactory = cfr.resolveComponentFactory(NotificationComponent);
     this.createContainer();

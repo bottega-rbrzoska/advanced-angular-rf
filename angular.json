@@ -10,7 +10,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
@@ -124,6 +125,46 @@
             "production": {
               "devServerTarget": "rf-proj:serve:production"
             }
+          }
+        }
+      }
+    },
+    "rf-lib": {
+      "projectType": "library",
+      "root": "projects/rf-lib",
+      "sourceRoot": "projects/rf-lib/src",
+      "prefix": "rf",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rf-lib/tsconfig.lib.json",
+            "project": "projects/rf-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rf-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rf-lib/src/test.ts",
+            "tsConfig": "projects/rf-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/rf-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rf-lib/tsconfig.lib.json",
+              "projects/rf-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
