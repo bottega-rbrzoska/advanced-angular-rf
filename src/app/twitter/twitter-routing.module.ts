@@ -5,7 +5,6 @@ import { TwitterListComponent } from './twitter-list/twitter-list.component';
 const routes: Routes = [
   {path: '', component: TwitterListComponent }
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
