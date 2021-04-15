@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from 'src/app/core/services/test.service';
 
 @Component({
   selector: 'rf-contact',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testService: TestService) {
+    testService.getCategories().subscribe( v => console.log(v))
+   }
 
   ngOnInit(): void {
   }
