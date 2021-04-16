@@ -14,7 +14,7 @@ interface User {
 }
 
 
-interface TypeWithNevers {
+export interface TypeWithNevers {
   testNever1: never;
   testNever2: never;
   noNever: string;
@@ -53,14 +53,14 @@ var myStringObj: stringObject = { test: 'asdasd' }
 type PropsOfBaseClass<T, R> = {
   [K in keyof T]: T[K] extends R ? K : never
 }
+type OnlySelectedTypePropsFromClass<T, R> = Pick<T,  PropsOfBaseClass<T, R>[keyof T]>
 
 type AllowedKeyNames<T, R> = PropsOfBaseClass<T, R>[keyof T]
 
 
 type OnlyFunctionsFromClass<T> = Pick<T, AllowedKeyNames<T, Function>>
 
-
-
+type OnlyFunctionsFromClass1 = OnlySelectedTypePropsFromClass<MyClass, Function>
 
 
 type MyNewPartialType2 = Omit<Product, 'id'>
@@ -68,3 +68,13 @@ type MyNewPartialType2 = Omit<Product, 'id'>
 type NewObjectRequestData<BaseType> = Omit<BaseType, 'id'>
 
 type PickedProductData =  Pick<Product, 'category' | 'description'>
+
+type DropdownData = { value: any, label: string };
+
+type DropdownMap = Record<string, DropdownData>
+
+const dictionary: DropdownMap = {
+  test: {label: 'ahahha', value: 122323},
+  test1: {label: 'ahahha', value: 122323},
+  test2: {label: 'ahahha', value: 122323}
+}

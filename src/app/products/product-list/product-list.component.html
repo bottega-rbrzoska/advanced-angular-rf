@@ -7,7 +7,7 @@
 <div>
   <button mat-button color="primary" (click)="selectAll()">Select All</button>
   <mat-card >
-    <div *ngFor="let product of products"rfSelectable="selected-box" [rfSelectableValue]="product.id">{{ product.name }}</div>
+    <div *ngFor="let product of products$ | async" rfSelectable="selected-box" [rfSelectableValue]="product.id">{{ product.name }}</div>
 
   </mat-card>
 

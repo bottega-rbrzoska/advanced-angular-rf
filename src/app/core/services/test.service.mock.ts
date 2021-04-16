@@ -1,9 +1,11 @@
-import { BehaviorSubject } from 'rxjs'
+import { BehaviorSubject, Observable, of } from 'rxjs'
+import { OnlySelectedTypePropsFromClass,OnlySelectedTypeOptionalPropsFromClass } from 'src/app/type-utils/custom-type-selectors';
 import { TestService } from './test.service';
 
 export function testServiceMockFactory() {
-
-  const mock: TestService = {
+  let mock: OnlySelectedTypePropsFromClass<TestService, Function> & OnlySelectedTypeOptionalPropsFromClass<TestService, Observable<any>>= {
+    getCategories() { return of()},
+    increment() {},
 
   }
 
