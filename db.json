@@ -3,6 +3,20 @@
     "food",
     "electronics"
   ],
+  "user": {
+    "_id": "5cee19c95b7a03f718bdf0cb",
+    "index": 0,
+    "guid": "488ecd90-e80e-4a41-92db-33cb69e486c9",
+    "isActive": true,
+    "likes": 125,
+    "avatar": "https://picsum.photos/100/100",
+    "img": "https://picsum.photos/400/300",
+    "type": "text",
+    "author": {
+      "first": "Brigitte",
+      "last": "Jackson"
+    }
+  },
   "products": [
     {
       "id": 1,
